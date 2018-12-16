@@ -1,0 +1,21 @@
+.menu-area {
+    height: 100%;
+    margin: 0px;
+    width: 108px;
+}
+
+.menu-bar {
+    width: 65px;
+    height: 100%;
+}
+
+.left-menu-bar {
+    margin-left: 28px;
+    width: 65px;
+    transition: 0.3s ease-in-out;
+}
+
+.left-menu-bar:hover {
+    margin-left: 5px;
+    width: 100px;
+}
