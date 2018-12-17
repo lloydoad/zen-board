@@ -7,6 +7,9 @@
 .menu-bar {
     width: 65px;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .left-menu-bar {
@@ -18,4 +21,25 @@
 .left-menu-bar:hover {
     margin-left: 5px;
     width: 100px;
+}
+
+.menu-button {
+    height: 45px;
+    width: 100%;
+    object-fit: contain;
+    margin: 12px 0px;
+}
+
+.button-container {
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+
+.menu-label {
+    text-align: center;
+    font-size: small;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #402D2D;
 }
