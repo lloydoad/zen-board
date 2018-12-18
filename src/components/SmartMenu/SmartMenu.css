@@ -1,7 +1,8 @@
 .menu-area {
     height: 100%;
     margin: 0px;
-    width: 108px;
+    width: 115px;
+    min-width: 115px;
 }
 
 .menu-bar {
@@ -37,9 +38,9 @@
 }
 
 .menu-label {
+    height: 45px;
     text-align: center;
     font-size: small;
     font-weight: bold;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #402D2D;
 }

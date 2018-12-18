@@ -11,10 +11,10 @@ export default class SmartMenu extends Component {
         super(props);
         this.state = {
             menuItems: [
-                { name: "Time and Place", logo: GeoLogo, isFocused: false },
-                { name: "News", logo: NewsLogo, isFocused: false },
-                { name: "Reading List", logo: ReadingLogo, isFocused: true },
-                { name: "Settings", logo: SettingsLogo, isFocused: false }
+                { name: "Time and Place", logo: GeoLogo, isFocused: false, response: "time" },
+                { name: "News", logo: NewsLogo, isFocused: false, response: "news" },
+                { name: "Reading List", logo: ReadingLogo, isFocused: false, response: "list" },
+                { name: "Settings", logo: SettingsLogo, isFocused: false, response: "settings" }
             ]
         }
     }
@@ -55,6 +55,7 @@ export default class SmartMenu extends Component {
                 key={menuItem.name} 
                 onMouseEnter={()=>{this.menuHover(index)}}
                 onMouseLeave={()=>{this.menuHoverExit(index)}} 
+                onClick={()=>this.props.menuClicked(menuItem.response)}
                 className="button-container">
                     {innerBtn}
                 </div>

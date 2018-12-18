@@ -1,0 +1,16 @@
+.smaller-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.smaller-panel-headline {
+    font-size: 4em;
+    margin: 0px;
+}
+
+.smaller-panel-underline {
+    font-size: 1.73em;
+    font-weight: lighter;
+}

@@ -2,6 +2,10 @@ body {
   overflow: none;
 }
 
+p, h1, h2, h3, h4, h5, h5 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 .app {
   background-color: #C49B9B;
   position: absolute;
@@ -21,8 +25,48 @@ body {
 
 .left-container {
   position: relative;
+  display: flex;
+  flex-direction: row;
   height: 100%;
   width: 100%;
+}
+
+.left-middle-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.left-middle-top-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 0px;
+  overflow: hidden;
+  margin: 0px;
+  margin-bottom: 0px;
+}
+
+.left-middle-top-container.verticalExpand {
+  -webkit-transition: 0.55s;
+  -moz-transition: 0.55s;
+  -ms-transition: 0.55s;
+  -o-transition: 0.55s;
+  transition: 0.55s ease-out;
+  height: 150px;
+  margin-bottom: 30px;
+}
+
+.left-middle-top-container.verticalCollapse {
+  -webkit-transition: 0.55s;
+  -moz-transition: 0.55s;
+  -ms-transition: 0.55s;
+  -o-transition: 0.55s;
+  transition: 0.55s ease-out;
+  height: 0px;
+  margin-bottom: 0px;
 }
 
 .middle-pink-panel {
