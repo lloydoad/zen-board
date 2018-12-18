@@ -3,6 +3,7 @@
     margin: 0px;
     width: 115px;
     min-width: 115px;
+    cursor: pointer;
 }
 
 .menu-bar {

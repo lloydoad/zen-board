@@ -1,0 +1,22 @@
+.news-panel-container {
+    height: 0px;
+    width: 100%;
+}
+
+.news-panel-container.newsVerticalExpand {
+    -webkit-transition: 0.45s;
+    -moz-transition: 0.45s;
+    -ms-transition: 0.45s;
+    -o-transition: 0.45s;
+    transition: 0.45s ease-out;
+    height: 100%;
+  }
+  
+  .news-panel-container.newsVerticalCollapse {
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s ease-out;
+    height: 0px;
+  }

@@ -3,6 +3,7 @@ import { Row } from 'react-bootstrap';
 
 import SmartMenu from './components/SmartMenu/SmartMenu';
 import GeoPanel from './components/GeoPanel/GeoPanel';
+import NewsPanel from './components/NewsPanel/NewsPanel';
 
 import './App.css';
 
@@ -34,7 +35,10 @@ class App extends Component {
 
     if(panelName === "time") {
       openPanels.timePanel = !(openPanels.timePanel);
+    }else if(panelName === "news") {
+      openPanels.newsPanel = !(openPanels.newsPanel);
     }
+
     this.setState({openPanels:openPanels})
   }
 
@@ -61,7 +65,7 @@ class App extends Component {
                 minWidth={weatherPanelInfo.width}
                 />
               </div>
-
+              <NewsPanel isExpanded={this.state.openPanels.newsPanel}/>
             </div>
           </div>
         </div>
