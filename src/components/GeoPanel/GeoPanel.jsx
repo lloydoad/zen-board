@@ -5,8 +5,6 @@ export default class GeoPanel extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            headline: this.props.headline,
-            underline: this.props.underline,
             minWidth: this.props.minWidth
         }
     }
@@ -20,8 +18,8 @@ export default class GeoPanel extends Component {
 
         return (
             <div className="middle-pink-panel smaller-panel" style={panelDimension}>
-                <h1 className="smaller-panel-headline">{this.state.headline}</h1>
-                <h4 className="smaller-panel-underline">{this.state.underline}</h4>
+                <h1 className="smaller-panel-headline">{this.props.headline}</h1>
+                <h4 className="smaller-panel-underline">{this.props.underline}</h4>
             </div>
         );
     }

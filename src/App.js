@@ -3,7 +3,7 @@ import { Row } from 'react-bootstrap';
 
 import SmartMenu from './components/SmartMenu/SmartMenu';
 import GeoPanel from './components/GeoPanel/GeoPanel';
-import NewsPanel from './components/NewsPanel/NewsPanel';
+import NewsDisplayPanel from './components/NewsPanel/NewsDisplayPanel';
 
 import './App.css';
 
@@ -28,6 +28,31 @@ class App extends Component {
         width: "33%"
       }
     }
+  }
+
+  componentDidMount() {
+    this.timeID = setInterval(
+      ()=>this.tick(), 
+      100
+    );
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.timeID);
+  }
+
+  tick() {
+    const { timePanelInfo } = this.state;
+
+    var options = { year: 'numeric', month: 'long', day: 'numeric' };
+    var timeOptions = { hour12: true }
+    var today  = new Date();
+    timePanelInfo.day = today.toLocaleDateString("en-US", options);
+    timePanelInfo.time = today.toLocaleTimeString("en-US", timeOptions);
+
+    console.log("running");
+
+    this.setState({timePanelInfo:timePanelInfo});
   }
 
   respondToMenuBtn = (panelName) => {
@@ -65,7 +90,7 @@ class App extends Component {
                 minWidth={weatherPanelInfo.width}
                 />
               </div>
-              <NewsPanel isExpanded={this.state.openPanels.newsPanel}/>
+              <NewsDisplayPanel isExpanded={this.state.openPanels.newsPanel}/>
             </div>
           </div>
         </div>
